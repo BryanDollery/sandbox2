@@ -14,7 +14,7 @@ start:
 		   --hostname "$$(basename $$PWD)" \
 		   --name "$$(basename $$PWD)" \
 		   -w /$$(basename $$PWD) \
-		   bryandollery/terraform-packer-aws-alpine:4
+		   bryandollery/terraform-packer-aws-alpine:14
 
 exec:
 	docker exec -it "$$(basename $$PWD)" bash || true
