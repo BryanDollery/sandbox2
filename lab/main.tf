@@ -143,10 +143,12 @@ resource "aws_key_pair" "lab_keypair" {
 
 data "aws_ami" "latest_sandbox" {
   most_recent = true
-  owners      = ["258751437250"]
+  owners      = ["self"]
+  name_regex  = "^${var.name}-sandbox-\\d*$"
+
   filter {
     name   = "name"
-    values = ["ami-ubuntu-18.04-1.13.0-00-1543963388"]
+    values = ["${var.name}-sandbox-*"]
   }
 }
 
