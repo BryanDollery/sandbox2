@@ -26,7 +26,7 @@ fmt:
 	time terraform fmt -recursive
 
 plan:
-	time terraform plan -out plan.out -var-file=variables.tfvars
+	time terraform plan -out plan.out
 
 apply:
 	time terraform apply plan.out 
